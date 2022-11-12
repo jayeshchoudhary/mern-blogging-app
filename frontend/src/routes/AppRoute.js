@@ -8,13 +8,13 @@ import { NotFoundPage } from "../pages/NotFoundPage";
 
 export const APP_ROUTE = {
     HOME_PAGE: "/",
-    BLOG_LIST: "/list",
-    BLOG_DETAILS: ":/id/details",
-    BLOG_EDIT: ":/id/edit",
-    BLOG_CREATE: "/create",
+    BLOG_LIST: "/blog/list",
+    BLOG_DETAILS: "/blog/:id/details",
+    BLOG_EDIT: "/blog/:id/edit",
+    BLOG_CREATE: "/blog/create",
 };
 
-export const AppRoute = () => {
+export const AppRouter = () => {
     return (
         <Routes>
             <Route

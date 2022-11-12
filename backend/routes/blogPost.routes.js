@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
 
         res.status(200).send(savedBlogPost);
     } catch (error) {
-        res.status(500).json(error && error.message);
+        res.status(500).json({ error: true, message: error.message });
     }
 });
 
@@ -29,7 +29,7 @@ router.get("/all", async (req, res) => {
 
         res.status(200).json(allBlogPost);
     } catch (error) {
-        res.status(500).json(error && error.message);
+        res.status(500).json({ error: true, message: error.message });
     }
 });
 
@@ -46,7 +46,7 @@ router.get("/:id", async (req, res) => {
 
         res.status(200).json(blogPost);
     } catch (error) {
-        res.status(500).json(error && error.message);
+        res.status(500).json({ error: true, message: error.message });
     }
 });
 
@@ -64,7 +64,7 @@ router.delete("/:id", async (req, res) => {
 
         res.status(200).json(deletedBlogPost);
     } catch (error) {
-        res.status(500).json(error && error.message);
+        res.status(500).json({ error: true, message: error.message });
     }
 });
 
@@ -92,7 +92,7 @@ router.put("/:id", async (req, res) => {
 
         res.status(200).json(editedBlogPost);
     } catch (error) {
-        res.status(500).json(error && error.message);
+        res.status(500).json({ error: true, message: error.message });
     }
 });
 
