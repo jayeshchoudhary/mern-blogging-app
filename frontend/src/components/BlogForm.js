@@ -1,8 +1,8 @@
 import { Button, Paper, Tab, Tabs, TextField } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { LoadingIndicator } from "./LoadingIndicator";
+import { RenderMarkdown } from "./RenderMarkdown";
 
 export const BlogForm = ({ data = {}, onSubmit, loading }) => {
     const [title, setTitle] = useState("");
@@ -101,7 +101,7 @@ export const BlogForm = ({ data = {}, onSubmit, loading }) => {
 
                     <div hidden={markDownTab !== 1}>
                         <Paper style={{ padding: 14 }} variant="outlined">
-                            <ReactMarkdown>{markdown}</ReactMarkdown>
+                            <RenderMarkdown markdown={markdown} />
                         </Paper>
                     </div>
                 </Box>

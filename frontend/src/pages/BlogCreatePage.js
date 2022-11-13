@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createBlog } from "../api/blogApi";
 import { BlogForm } from "../components/BlogForm";
-import { LoadingIndicator } from "../components/LoadingIndicator";
 import { APP_ROUTE } from "../routes/AppRoute";
 
 export const BlogCreatePage = () => {

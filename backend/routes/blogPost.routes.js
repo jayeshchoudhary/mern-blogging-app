@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
 // get all blog post
 router.get("/all", async (req, res) => {
     try {
-        const allBlogPost = await BlogPost.find({}, { markdown: 0 });
+        const allBlogPost = await BlogPost.find();
 
         res.status(200).json(allBlogPost);
     } catch (error) {

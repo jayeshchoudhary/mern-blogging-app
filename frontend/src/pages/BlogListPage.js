@@ -14,6 +14,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useNavigate } from "react-router-dom";
 import { APP_ROUTE } from "../routes/AppRoute";
 import AddIcon from "@mui/icons-material/Add";
+import { RenderReadTime } from "../components/RenderReadTime";
 
 export const BlogListPage = () => {
     const [loading, setLoading] = useState(true);
@@ -88,9 +89,8 @@ export const BlogListPage = () => {
                                     padding: 16,
                                 }}
                             >
-                                <Typography color="gray" variant="subtitle1">
-                                    3 min read
-                                </Typography>
+                                <RenderReadTime markdown={blog.markdown} />
+
                                 <Button
                                     variant="outlined"
                                     endIcon={<ChevronRightIcon />}

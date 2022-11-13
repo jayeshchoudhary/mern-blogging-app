@@ -14,11 +14,12 @@ import {
     Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { deleteBlog, getBlog } from "../api/blogApi";
 import { LoadingIndicator } from "../components/LoadingIndicator";
+import { RenderMarkdown } from "../components/RenderMarkdown";
+import { RenderReadTime } from "../components/RenderReadTime";
 import { APP_ROUTE } from "../routes/AppRoute";
 
 export const BlogDetails = () => {
@@ -107,17 +108,15 @@ export const BlogDetails = () => {
                     }
                     subheader={
                         <Box mt="15px">
-                            <Typography variant="subtitle2">
+                            <Typography color={"gray"} variant="subtitle1">
                                 Created at - {blogDetails.createdAt}
                             </Typography>
                             {blogDetails.updatedAt && (
-                                <Typography variant="subtitle2">
+                                <Typography color={"gray"} variant="subtitle1">
                                     Updated at - {blogDetails.updatedAt}
                                 </Typography>
                             )}
-                            <Typography variant="subtitle2">
-                                3 min read
-                            </Typography>
+                            <RenderReadTime markdown={blogDetails.markdown} />
                         </Box>
                     }
                 />
@@ -130,7 +129,7 @@ export const BlogDetails = () => {
                     <Divider style={{ marginBlock: 20 }} />
 
                     <Box>
-                        <ReactMarkdown>{blogDetails.markdown}</ReactMarkdown>
+                        <RenderMarkdown markdown={blogDetails.markdown} />
                     </Box>
                 </CardContent>
             </Card>
