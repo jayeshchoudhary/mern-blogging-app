@@ -17,7 +17,7 @@ export const BlogForm = ({ data = {}, onSubmit, loading }) => {
         title && setTitle(title);
         description && setDescription(description);
         markdown && setMarkDown(markdown);
-    }, []);
+    }, [data]);
 
     const handleMarkdownTabChange = (_, newValue) => {
         setMarkDownTab(newValue);

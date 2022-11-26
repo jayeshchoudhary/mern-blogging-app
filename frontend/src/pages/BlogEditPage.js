@@ -44,10 +44,6 @@ export const BlogEditPage = () => {
         setLoading(false);
     };
 
-    if (Object.keys(blogDetails).length === 0) {
-        return <Typography>No Data</Typography>;
-    }
-
     return (
         <BlogForm
             loading={loading}
