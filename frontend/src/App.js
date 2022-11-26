@@ -30,7 +30,7 @@ export const App = () => {
             <Container style={{ marginBlock: 20 }}>
                 <AppRouter />
             </Container>
-            <ToastContainer autoClose={4000} />
+            <ToastContainer position="top-center" autoClose={4000} />
         </React.Fragment>
     );
 };
