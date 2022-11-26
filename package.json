@@ -1,0 +1,22 @@
+{
+    "name": "mern-blogging-app",
+    "version": "1.0.0",
+    "description": "<img width=\"1728\" alt=\"image\" src=\"https://user-images.githubusercontent.com/41536903/203000027-bf60c6a8-24f0-4f5a-a677-8ae35b58422f.png\">",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+        "start": "node backend/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jayeshchoudhary/mern-blogging-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jayeshchoudhary/mern-blogging-app/issues"
+    },
+    "homepage": "https://github.com/jayeshchoudhary/mern-blogging-app#readme"
+}

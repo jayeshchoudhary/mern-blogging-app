@@ -1,4 +1,5 @@
 import {
+    Box,
     Button,
     Card,
     CardActions,
@@ -67,11 +68,19 @@ export const BlogListPage = () => {
                 </Button>
             </Grid>
 
-            {(!allBlogs || allBlogs === []) && (
-                <Typography>No Blogs Available</Typography>
+            {(!allBlogs || allBlogs.length === 0) && (
+                <Box
+                    height={300}
+                    width="100%"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Typography variant="h4">No Blogs Available</Typography>
+                </Box>
             )}
 
-            {!(!allBlogs || allBlogs === []) &&
+            {!(!allBlogs || allBlogs.length === 0) &&
                 allBlogs.map((blog, index) => (
                     <Grid item xs={12} md={6} lg={4} key={index}>
                         <Card variant="outlined">
